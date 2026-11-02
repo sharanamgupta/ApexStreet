@@ -1,0 +1,2 @@
+package com.apexstreet.repository; import com.apexstreet.model.*; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository;
+public interface AutomationSchedulePhaseRepository extends JpaRepository<AutomationSchedulePhase,Long>{List<AutomationSchedulePhase> findByConfigurationIdOrderByWeekTypeAscPhaseOrderAsc(Long id); Optional<AutomationSchedulePhase> findByIdAndConfigurationId(Long id,Long configId);}
